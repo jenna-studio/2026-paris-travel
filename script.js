@@ -236,11 +236,12 @@ const tripData = {
       ]
     },
     stay2: {
-      title: "Stay 2",
+      title: "Hotel Gabriel",
       subtitle: "Mont-Saint-Michel stay",
       mapQuery: "Hotel Gabriel, Mont-Saint-Michel, France",
+      bookingUrl:
+        "https://www.dropbox.com/scl/fi/5lrpudx5i0q5xk9wikv1w/0713_1-_-_7-9-_-_.pdf?rlkey=ktlpzls4ij7i44faxwqyq94e0&e=1&st=e26vg93b&dl=0",
       items: [
-        "Hotel Gabriel",
         "Check-in: July 13 at 20:00",
         "Checkout noted: July 14 at 11:00"
       ]
@@ -322,6 +323,276 @@ const detailLookup = {
       "It is closely associated with artists, cabarets, and the hill around Sacre-Coeur.",
       "This stop works well as a morning walking area because several nearby sights cluster within a short distance.",
       "Your Day 4 plan uses Montmartre as the main area before moving through its landmark stops."
+    ]
+  },
+  jemur: {
+    label: "Art Wall",
+    title: "Le Mur des Je t'aime",
+    subtitle: "Famous love wall in Montmartre made of blue tiles covered with 'I love you' in many languages.",
+    mapQuery: "Le Mur des Je t'aime, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/2022-04-12-Le%20mur%20des%20je%20t%27aime-8493.jpg?width=800",
+    imageAlt: "Le Mur des Je t'aime in Paris",
+    items: [
+      "This small public artwork is one of Montmartre’s best-known photo spots.",
+      "The wall displays 'I love you' written in many languages, which is the main reason visitors stop here.",
+      "It fits naturally into a Montmartre walking route because it is compact and easy to pair with nearby hilltop sights.",
+      "Your itinerary uses it as one of the short landmark stops in the Day 4 morning sequence."
+    ]
+  },
+  funiculaire: {
+    label: "Funicular",
+    title: "Funiculaire de Montmartre",
+    subtitle: "Short hillside railway that carries visitors up toward Sacre-Coeur without climbing the long stairway.",
+    mapQuery: "Funiculaire de Montmartre, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/France-000439%20-%20Montmartre%20Funicular%20%2814707558697%29.jpg?width=800",
+    imageAlt: "Montmartre funicular in Paris",
+    items: [
+      "The funicular is the easy way to reach the upper part of Montmartre without taking the full staircase.",
+      "It is mainly practical, but it also feels like part of the classic Montmartre experience.",
+      "Using it fits well with nearby stops such as Le Mur des Je t'aime and Sacre-Coeur because they cluster on the same hill route.",
+      "Your itinerary treats this as one of the Day 4 access highlights inside the Montmartre sequence."
+    ]
+  },
+  sacrecoeur: {
+    label: "Basilica",
+    title: "Basilique du Sacre-Coeur",
+    subtitle: "White-domed hilltop basilica that crowns Montmartre and overlooks Paris from one of the city’s highest points.",
+    mapQuery: "Basilique du Sacre-Coeur, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Basilique%20Sacr%C3%A9%20C%C5%93ur%20Montmartre.jpg?width=800",
+    imageAlt: "Basilique du Sacre-Coeur in Montmartre, Paris",
+    items: [
+      "This is one of Paris’s most recognizable churches and the visual centerpiece of Montmartre.",
+      "It is known for its bright white exterior, broad front steps, and panoramic view over the city.",
+      "The stop fits naturally after the funicular because the basilica sits at the top of the Montmartre hill.",
+      "Your itinerary treats it as one of the major highlights in the Day 4 morning route."
+    ]
+  },
+  tertre: {
+    label: "Square",
+    title: "Place du Tertre",
+    subtitle: "Historic Montmartre square known for portrait artists, cafes, and its classic old-Paris atmosphere.",
+    mapQuery: "Place du Tertre, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Place%20du%20Tertre%20%2839776994984%29.jpg?width=800",
+    imageAlt: "Place du Tertre in Montmartre, Paris",
+    items: [
+      "This square is one of the signature spots in Montmartre and is especially known for street artists and portrait stands.",
+      "It feels more intimate and village-like than the larger boulevards of central Paris.",
+      "The stop fits naturally after Sacre-Coeur because it is part of the same upper Montmartre walking area.",
+      "Your itinerary uses it as a shorter landmark stop inside the Day 4 neighborhood sequence."
+    ]
+  },
+  maisonconsulat: {
+    label: "Montmartre Streets",
+    title: "La Maison Rose & Le Consulat",
+    subtitle: "Two of Montmartre’s best-known cafe facades, both popular as classic photo stops in the hilltop neighborhood.",
+    mapQuery: "La Maison Rose, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Maison%20Rose%2C%20Paris%2C%20Montmartre.jpg?width=800",
+    imageAlt: "La Maison Rose in Montmartre, Paris",
+    items: [
+      "La Maison Rose is the famous pink corner house in Montmartre and one of the neighborhood’s most recognizable facades.",
+      "Le Consulat is another classic Montmartre cafe nearby, known for its old-Paris street atmosphere.",
+      "These spots work best as short walking and photo stops rather than long sightseeing visits.",
+      "Your itinerary groups them naturally after Place du Tertre as part of the same upper Montmartre wandering route."
+    ]
+  },
+  marais: {
+    label: "Neighborhood",
+    title: "Le Marais",
+    subtitle: "Historic central Paris district known for old streets, boutiques, cafes, and a lively walkable atmosphere.",
+    mapQuery: "Le Marais, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Marais%20%40%20Paris%20%2815444920131%29.jpg?width=800",
+    imageAlt: "Street view in Le Marais, Paris",
+    items: [
+      "Le Marais is one of Paris’s most popular walking neighborhoods, mixing historic buildings with shops, cafes, and small streets.",
+      "It is especially known for fashion boutiques, food stops, and a strong neighborhood atmosphere compared with the grand boulevards.",
+      "The area fits well for a slower afternoon of strolling, shopping, and short landmark stops.",
+      "Your itinerary uses it as the main base for the Day 4 afternoon before Place des Vosges and Rue des Rosiers."
+    ]
+  },
+  vosges: {
+    label: "Square",
+    title: "Place des Vosges",
+    subtitle: "Elegant historic square in the Marais, known for its arcades, symmetry, and calm garden center.",
+    mapQuery: "Place des Vosges, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Place%20des%20Vosges%2C%20Paris.jpg?width=800",
+    imageAlt: "Place des Vosges in Paris",
+    items: [
+      "Often described as one of the most beautiful squares in Paris, it is known for its formal layout and red-brick facades.",
+      "The arcades and central lawn make it feel quieter and more refined than the busier shopping streets nearby.",
+      "It fits naturally within a Marais walking route as a slower, more architectural stop.",
+      "Your itinerary treats this as one of the main Day 4 afternoon landmarks after exploring Le Marais."
+    ]
+  },
+  rosier: {
+    label: "Street",
+    title: "Rue des Rosiers",
+    subtitle: "One of the best-known streets in the Marais, associated with the historic Jewish quarter and popular food stops.",
+    mapQuery: "Rue des Rosiers, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Paris%2C%20Rue%20des%20Rosiers%20%2843040432771%29.jpg?width=800",
+    imageAlt: "Rue des Rosiers in Paris",
+    items: [
+      "Rue des Rosiers is one of the signature streets of the Marais and is closely tied to the neighborhood’s historic Jewish community.",
+      "It is especially known for casual food stops, bakeries, and lively pedestrian street atmosphere.",
+      "This stop works well as both a short walk and a practical snack or meal area during a Marais afternoon.",
+      "Your itinerary places it after Place des Vosges as part of the same Day 4 neighborhood wandering route."
+    ]
+  },
+  notredame: {
+    label: "Cathedral",
+    title: "Notre-Dame Cathedral",
+    subtitle: "Historic Gothic cathedral on the Ile de la Cite, one of Paris’s most iconic religious and architectural landmarks.",
+    mapQuery: "Notre-Dame Cathedral, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Notre%20dame%20cathedral%2C%20Paris.jpg?width=800",
+    imageAlt: "Notre-Dame Cathedral in Paris",
+    items: [
+      "Notre-Dame is one of the defining monuments of Paris and one of the most famous examples of French Gothic architecture.",
+      "It is especially known for its towers, rose windows, riverside setting, and long historical significance in the city.",
+      "This stop fits naturally after the Marais because it is within walking reach and shifts the route toward the Ile de la Cite.",
+      "Your itinerary treats it as one of the key Day 4 landmark visits before continuing farther south."
+    ]
+  },
+  pantheon: {
+    label: "Monument",
+    title: "Pantheon",
+    subtitle: "Neoclassical monument in the Latin Quarter, known for its grand dome and its role as a resting place for major French figures.",
+    mapQuery: "Pantheon, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Panth%C3%A9on%20Paris.JPG?width=800",
+    imageAlt: "Pantheon in Paris",
+    items: [
+      "The Pantheon began as a church and now serves as one of France’s major national monuments.",
+      "It is especially known for its monumental dome, formal facade, and tombs of notable French writers, scientists, and public figures.",
+      "This stop fits well after Notre-Dame because it continues the route into the Left Bank and the Latin Quarter area.",
+      "Your itinerary treats it as one of the major late-afternoon landmarks on Day 4."
+    ]
+  },
+  luxembourg: {
+    label: "Garden",
+    title: "Luxembourg Gardens",
+    subtitle: "Classic Left Bank garden known for formal paths, fountains, lawns, and a relaxed Parisian park atmosphere.",
+    mapQuery: "Luxembourg Gardens, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fountain%20%40%20Jardin%20du%20Luxembourg%20%40%20Paris%20%2830623667325%29.jpg?width=800",
+    imageAlt: "Luxembourg Gardens in Paris",
+    items: [
+      "Luxembourg Gardens is one of Paris’s best-known public gardens and a classic place for a lighter, slower walk.",
+      "It is especially known for its tree-lined paths, chairs around the fountain basin, and the elegant setting beside the Luxembourg Palace.",
+      "This stop fits naturally after the Pantheon because it keeps you in the same Left Bank area while shifting into a calmer outdoor setting.",
+      "Your itinerary treats it as one of the final Day 4 stops before returning toward the metro."
+    ]
+  },
+  giverny: {
+    label: "Garden + House",
+    title: "Giverny",
+    subtitle: "Village visit centered on Claude Monet’s home and gardens, one of the most iconic art-related day-trip stops from Paris.",
+    mapQuery: "Fondation Claude Monet, Giverny, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Monet%20Garden%2C%20Giverny%20%283%29.jpg?width=800",
+    imageAlt: "Monet garden in Giverny",
+    items: [
+      "Giverny is best known for Claude Monet’s house and gardens, including the water-lily area and Japanese bridge that inspired his paintings.",
+      "It works especially well as a morning-to-midday stop because the garden and house are the main experience rather than a dense town itinerary.",
+      "This is one of the most visually distinctive nature-and-art stops in your trip, contrasting with the Paris city days before and after.",
+      "Your itinerary focuses on the Fondation Claude Monet, including the garden, pond, bridge, and house interior."
+    ]
+  },
+  monetfoundation: {
+    label: "Monet Site",
+    title: "Fondation Claude Monet",
+    subtitle: "Monet’s house and gardens in Giverny, preserved as the core visit of the village.",
+    mapQuery: "Fondation Claude Monet, Giverny, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Giverny%2C%20Monet%20house.jpg?width=800",
+    imageAlt: "Claude Monet's house in Giverny",
+    items: [
+      "This is the main destination in Giverny and the centerpiece of the village visit.",
+      "It includes Monet’s colorful house, flower garden, and the separate water garden with the bridge and lily-pond setting.",
+      "This stop is more specific than the broader Giverny label because it is the actual site tied to Monet’s life and paintings.",
+      "Your itinerary treats it as the main visit within the Day 5 Giverny stop."
+    ]
+  },
+  rouen: {
+    label: "City Stop",
+    title: "Rouen",
+    subtitle: "Historic Normandy city known for its cathedral, medieval center, and timber-framed streets.",
+    mapQuery: "Rouen, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Rouen%20Old%20Town%20%2830784770452%29.jpg?width=800",
+    imageAlt: "Old town street in Rouen, France",
+    items: [
+      "Rouen is best known for its cathedral, old market area, and dense medieval center with timber-framed buildings.",
+      "It works well as a compact afternoon stop because several of the main sights are close together in the historic core.",
+      "This matches your plan closely, since Rouen Cathedral, the old town, Gros-Horloge, and Place du Vieux-Marche are all part of the same walking area.",
+      "Your itinerary treats Rouen as a focused 2-hour city stop before driving onward to Mont-Saint-Michel."
+    ]
+  },
+  rouencathedral: {
+    label: "Cathedral",
+    title: "Rouen Cathedral",
+    subtitle: "Major Gothic cathedral in Normandy, famous for its intricate facade and its association with Monet’s cathedral series.",
+    mapQuery: "Rouen Cathedral, Rouen, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Fa%C3%A7ade%20of%20the%20Cath%C3%A9drale%20Notre-Dame%20de%20Rouen%20%2830268693284%29.jpg?width=800",
+    imageAlt: "Rouen Cathedral in Rouen, France",
+    items: [
+      "Rouen Cathedral is one of the city’s main landmarks and one of the best-known Gothic cathedrals in France.",
+      "It is especially recognized for its elaborate facade and for the series of paintings Claude Monet made of it in changing light.",
+      "This stop fits naturally inside your Rouen walking route because it anchors the historic center and connects closely with the old-town streets.",
+      "Your itinerary treats it as one of the headline sights within the Day 5 Rouen stop."
+    ]
+  },
+  rouenhalftimber: {
+    label: "Old Town",
+    title: "Rouen Half-Timbered Houses",
+    subtitle: "Medieval timber-framed streets that give Rouen much of its distinctive old-town character.",
+    mapQuery: "Rue du Gros-Horloge, Rouen, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama%20of%20Half-timber%20houses%20-%20The%20Old%20Town%20of%20Rouen%20%2830865170306%29.jpg?width=800",
+    imageAlt: "Half-timbered houses in Rouen old town",
+    items: [
+      "Rouen is especially known for its medieval timber-framed buildings, which are one of the main reasons the city feels so different from central Paris.",
+      "These streets are best experienced on foot, since much of the appeal comes from the facades, narrow lanes, and older urban texture.",
+      "This stop fits closely with your Rouen Cathedral and Gros-Horloge visit because the main historic sights are all clustered in the old center.",
+      "Your itinerary treats these medieval wooden buildings as one of the visual highlights of the Rouen segment."
+    ]
+  },
+  groshorloge: {
+    label: "Clock Landmark",
+    title: "Gros-Horloge",
+    subtitle: "Rouen’s famous Renaissance astronomical clock, mounted above one of the old town’s signature streets.",
+    mapQuery: "Gros-Horloge, Rouen, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Gros%20Horloge%20-%20Rouen.jpg?width=800",
+    imageAlt: "Gros-Horloge in Rouen, France",
+    items: [
+      "The Gros-Horloge is one of Rouen’s best-known landmarks and one of the city’s classic photo points.",
+      "It is an old astronomical clock set in an arch across the street, which gives this part of the old town a very distinctive look.",
+      "This stop fits naturally with Rouen Cathedral and the medieval streets because they are all concentrated in the same historic core.",
+      "Your itinerary treats it as one of the headline visual stops within the Rouen segment."
+    ]
+  },
+  vieuxmarche: {
+    label: "Square",
+    title: "Place du Vieux-Marche",
+    subtitle: "Historic old market square in Rouen, closely associated with Joan of Arc and the city’s medieval center.",
+    mapQuery: "Place du Vieux-Marche, Rouen, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Place%20du%20Vieux-March%C3%A9%2C%20Rouen%20%282%29.jpg?width=800",
+    imageAlt: "Place du Vieux-Marche in Rouen, France",
+    items: [
+      "This square is one of Rouen’s major historic sites and is strongly associated with Joan of Arc.",
+      "It combines a central square atmosphere with surrounding half-timbered buildings and later memorial elements.",
+      "The stop fits naturally with the cathedral, Gros-Horloge, and old-town walk because it is part of the same compact historic area.",
+      "Your itinerary treats it as one of the main Rouen landmarks within the short city stop."
     ]
   },
   orsay: {
@@ -695,6 +966,78 @@ function getItemTarget(item) {
 
   if (joined.includes("Montmartre")) {
     return "montmartre";
+  }
+
+  if (joined.includes("Le Mur des Je t'aime")) {
+    return "jemur";
+  }
+
+  if (joined.includes("Funiculaire")) {
+    return "funiculaire";
+  }
+
+  if (joined.includes("Sacre-Coeur")) {
+    return "sacrecoeur";
+  }
+
+  if (joined.includes("Place du Tertre")) {
+    return "tertre";
+  }
+
+  if (joined.includes("La Maison Rose") || joined.includes("Le Consulat")) {
+    return "maisonconsulat";
+  }
+
+  if (joined.includes("마레지구") || joined.includes("Le Marais")) {
+    return "marais";
+  }
+
+  if (joined.includes("Place des Vosges")) {
+    return "vosges";
+  }
+
+  if (joined.includes("Rue des Rosiers")) {
+    return "rosier";
+  }
+
+  if (joined.includes("Notre-Dame Cathedral")) {
+    return "notredame";
+  }
+
+  if (joined.includes("Pantheon")) {
+    return "pantheon";
+  }
+
+  if (joined.includes("Luxembourg Gardens")) {
+    return "luxembourg";
+  }
+
+  if (joined === "Giverny") {
+    return "giverny";
+  }
+
+  if (joined.includes("Fondation Claude Monet")) {
+    return "monetfoundation";
+  }
+
+  if (joined.includes("Rouen Cathedral")) {
+    return "rouencathedral";
+  }
+
+  if (joined.includes("목조건물")) {
+    return "rouenhalftimber";
+  }
+
+  if (joined.includes("Gros-Horloge")) {
+    return "groshorloge";
+  }
+
+  if (joined.includes("Place du Vieux-Marche")) {
+    return "vieuxmarche";
+  }
+
+  if (joined.startsWith("Rouen")) {
+    return "rouen";
   }
 
   if (joined.includes("세느강 따라 걷기")) {
