@@ -251,7 +251,6 @@ const tripData = {
 
 const scheduleRoot = document.getElementById("schedule");
 const navRoot = document.getElementById("day-nav");
-const metaRoot = document.getElementById("meta");
 const detailLookup = {
   stay1: {
     label: "Stay 1",
@@ -595,6 +594,146 @@ const detailLookup = {
       "Your itinerary treats it as one of the main Rouen landmarks within the short city stop."
     ]
   },
+  montabbey: {
+    label: "Abbey",
+    title: "Mont-Saint-Michel Abbey",
+    subtitle: "The famous hilltop abbey at Mont-Saint-Michel, combining dramatic architecture, historic cloisters, and sweeping views.",
+    mapQuery: "Mont-Saint-Michel Abbey, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Abbaye%20du%20Mont-Saint-Michel%20%2812%29.jpg?width=800",
+    imageAlt: "Mont-Saint-Michel Abbey in France",
+    items: [
+      "This is the signature monument of Mont-Saint-Michel and the main reason most visitors go up through the island streets.",
+      "It is especially known for its layered stone architecture, elevated terraces, and the dramatic setting above the bay.",
+      "The stop works well as your main Day 6 morning highlight because the abbey is the central experience before returning to the village lanes and viewpoints.",
+      "Your itinerary treats this as a focused 2-hour visit with the abbey itself as the priority."
+    ]
+  },
+  etretat: {
+    label: "Cliff Coast",
+    title: "Etretat Cliffs",
+    subtitle: "Normandy coastal cliffs known for dramatic chalk arches, sea views, and classic viewpoints around Falaise d'Aval.",
+    mapQuery: "Etretat Cliffs, Etretat, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Falaise%20d%20Aval%20in%20Etretat.jpg?width=800",
+    imageAlt: "Etretat cliffs in Normandy, France",
+    items: [
+      "Etretat is famous for its white chalk cliffs and natural arch formations, especially around Falaise d'Aval.",
+      "This is one of the most scenic landscape stops in your trip and works best for walking, views, and photos rather than indoor sightseeing.",
+      "Your route note about the beach and the northern cliff viewpoint fits the classic Etretat walking pattern very well.",
+      "The itinerary treats this as a focused 1.5-hour nature stop before returning toward Paris."
+    ]
+  },
+  grandvalparking: {
+    label: "Parking",
+    title: "Parking du Grand Val",
+    subtitle: "Convenient parking area commonly used for access to the Etretat cliff walk and beach approach.",
+    mapQuery: "Parking du Grand Val, Etretat, France",
+    items: [
+      "This parking stop is practical because it places you near the walking route toward the beach and cliff viewpoint.",
+      "For your itinerary, it functions mainly as the access point for the Etretat segment rather than a sightseeing stop."
+    ]
+  },
+  indigoPasteur: {
+    label: "Parking",
+    title: "Parking Indigo Paris Pasteur-Montparnasse",
+    subtitle: "Practical Paris parking option linked in your plan for the return to Stay 1.",
+    mapQuery: "Parking Indigo Paris Pasteur-Montparnasse, Paris, France",
+    items: [
+      "This parking stop functions as the nearby car-storage point for your return to the Paris accommodation.",
+      "In your itinerary, it is mainly a practical arrival detail rather than a sightseeing stop."
+    ]
+  },
+  saintgermaincafe: {
+    label: "Cafe Area",
+    title: "Saint-Germain-des-Pres Cafes",
+    subtitle: "Classic Left Bank cafe district associated with literary Paris, terrace culture, and long slow lunches.",
+    mapQuery: "Saint-Germain-des-Pres, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Lesdeuxmagots.jpg?width=800",
+    imageAlt: "Cafe terrace in Saint-Germain-des-Pres, Paris",
+    items: [
+      "Saint-Germain-des-Pres is one of the classic cafe neighborhoods in Paris and is strongly associated with literary and intellectual cafe culture.",
+      "The area is known for terrace seating, elegant streets, and famous cafes such as Les Deux Magots and Cafe de Flore.",
+      "It fits your Day 7 lunch stop well because it is more about atmosphere and a slower meal than about rushing through landmarks.",
+      "Your itinerary treats this as a cafe-based lunch and strolling stop before the Seine walk and shopping later in the day."
+    ]
+  },
+  bonmarche: {
+    label: "Department Store",
+    title: "Le Bon Marche",
+    subtitle: "Historic Left Bank department store known for luxury shopping and its highly regarded food hall.",
+    mapQuery: "Le Bon Marche, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Paris%20-%20Le%20Bon%20March%C3%A9%20%2829573701111%29.jpg?width=800",
+    imageAlt: "Le Bon Marche in Paris",
+    items: [
+      "Le Bon Marche is one of Paris’s most famous department stores and is especially associated with a more refined Left Bank shopping atmosphere.",
+      "It is a strong stop for gifts and gourmet products because La Grande Epicerie is one of the best-known food halls in the city.",
+      "This fits your Day 7 shopping block well because your note specifically points to the food section for items like olive oil and truffle products.",
+      "Your itinerary treats this as a practical and high-quality shopping stop rather than only a landmark photo stop."
+    ]
+  },
+  maraisshopping: {
+    label: "Shopping Area",
+    title: "Le Marais Shopping",
+    subtitle: "One of Paris’s strongest neighborhoods for niche shopping, younger brands, fragrance, vintage, and small distinctive boutiques.",
+    mapQuery: "Le Marais, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Marais%20%40%20Paris%20%2815444920131%29.jpg?width=800",
+    imageAlt: "Shopping street atmosphere in Le Marais, Paris",
+    items: [
+      "Le Marais is especially good for browsing smaller, more characterful shops rather than only major luxury flagships.",
+      "It is a strong area for perfume, younger labels, curated boutiques, vintage, and more unusual gift shopping.",
+      "This makes it a good contrast to Le Bon Marche because the experience is more neighborhood-based and exploratory.",
+      "Your itinerary treats this as the more style- and discovery-oriented part of the Day 7 shopping block."
+    ]
+  },
+  lavalleevillage: {
+    label: "Outlet Village",
+    title: "La Vallee Village",
+    subtitle: "Open-air designer outlet village east of Paris, known for brand shopping in a more polished, walkable setting.",
+    mapQuery: "La Vallee Village, Serris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Vall%C3%A9e%20Village%2C%20f%C3%A9vrier%202025%202.jpg?width=800",
+    imageAlt: "La Vallee Village in France",
+    items: [
+      "La Vallee Village is one of the main outlet-shopping destinations for Paris visitors looking for designer and luxury-brand discounts.",
+      "The setting is more village-like and easier to walk than a typical enclosed mall, which makes it fit a lighter final-day shopping plan.",
+      "This works well for your last full day because it is practical, focused, and easy to pair with airport-bound timing later on.",
+      "Your itinerary treats it as the main outlet option on Day 8."
+    ]
+  },
+  versaillesonenation: {
+    label: "Alternative Plan",
+    title: "Versailles Gardens + One Nation Paris",
+    subtitle: "A lighter alternative final-day plan that combines a brief Versailles exterior/garden stop with outlet shopping at One Nation Paris.",
+    mapQuery: "Palace of Versailles, Versailles, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Palace%20of%20Versailles%20Garden.jpg?width=800",
+    imageAlt: "Gardens of the Palace of Versailles",
+    items: [
+      "This option works as a softer version of the day: a light exterior or garden look at Versailles followed by shopping rather than a heavy palace visit.",
+      "The Versailles part is best treated as atmosphere and a short walk, especially if you want to save energy before the airport transfer.",
+      "One Nation Paris then gives you a more outlet-focused shopping stop than central Paris shopping streets.",
+      "Your itinerary presents this as the alternative to La Vallee Village on Day 8, not as an additional full sightseeing block."
+    ]
+  },
+  falaiseaval: {
+    label: "Viewpoint",
+    title: "Falaise d'Aval Viewpoint",
+    subtitle: "The classic Etretat cliff viewpoint overlooking the natural arch and sweeping Normandy coastline.",
+    mapQuery: "Falaise d'Aval, Etretat, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/%C3%89tretat%20-%20La%20Falaise%20d%27Aval%20-%20View%20NE.jpg?width=800",
+    imageAlt: "Falaise d'Aval viewpoint in Etretat, France",
+    items: [
+      "This is one of the signature viewpoints at Etretat and the classic place to appreciate the arch and cliff formation.",
+      "The stop is mainly about the coastal panorama, the white chalk formations, and the contrast between the sea and the rock face.",
+      "It fits your route exactly because the plan already moves from the beach toward the northern cliff viewpoint.",
+      "Your itinerary treats this as one of the key visual highlights within the Etretat stop."
+    ]
+  },
   orsay: {
     label: "Museum",
     title: "Musee d'Orsay",
@@ -782,6 +921,18 @@ function formatDate(dateString) {
   }).format(date);
 }
 
+const dayAccentPalette = [
+  "rgba(240, 159, 192, 0.98)",
+  "rgba(132, 208, 255, 0.98)",
+  "rgba(201, 184, 255, 0.98)",
+  "rgba(255, 228, 109, 0.98)",
+  "rgba(188, 238, 168, 0.98)",
+  "rgba(255, 171, 214, 0.98)",
+  "rgba(144, 214, 255, 0.98)",
+  "rgba(255, 210, 159, 0.98)",
+  "rgba(214, 190, 255, 0.98)"
+];
+
 function buildNav() {
   const fragment = document.createDocumentFragment();
 
@@ -789,6 +940,8 @@ function buildNav() {
     const link = document.createElement("a");
     link.className = "day-pill";
     link.href = `#day-${index + 1}`;
+    link.dataset.target = `day-${index + 1}`;
+    link.style.setProperty("--pill-accent", dayAccentPalette[index % dayAccentPalette.length]);
     link.innerHTML = `<strong>${day.dayLabel}</strong><span>${day.weekday}</span>`;
     fragment.appendChild(link);
   });
@@ -827,6 +980,26 @@ function setupDayNav() {
   window.addEventListener("hashchange", () => {
     const targetId = window.location.hash ? window.location.hash.slice(1) : "day-1";
     setActiveDayPill(targetId);
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visibleEntries = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (visibleEntries.length > 0) {
+        setActiveDayPill(visibleEntries[0].target.id);
+      }
+    },
+    {
+      rootMargin: "-24% 0px -55% 0px",
+      threshold: [0.2, 0.35, 0.5, 0.7]
+    }
+  );
+
+  scheduleRoot.querySelectorAll(".day-card").forEach((card) => {
+    observer.observe(card);
   });
 }
 
@@ -909,32 +1082,6 @@ function buildSchedule() {
   });
 
   scheduleRoot.appendChild(fragment);
-}
-
-function buildMeta() {
-  const sections = [
-    { key: "stay1", ...tripData.meta.stay1 },
-    { key: "stay2", ...tripData.meta.stay2 },
-    { key: "rental", ...tripData.meta.rental }
-  ];
-
-  metaRoot.innerHTML = sections
-    .map(
-      (section) => `
-        <div class="meta-block" id="meta-${section.key}" data-meta-key="${section.key}">
-          <h4>${section.title}</h4>
-          ${section.subtitle ? `<p class="meta-block__subtitle">${escapeHtml(section.subtitle)}</p>` : ""}
-          <div class="detail-links">
-            ${section.mapQuery ? `<a class="map-link" href="${buildGoogleMapsUrl(section.mapQuery)}" target="_blank" rel="noreferrer">Google Maps</a>` : ""}
-            ${section.bookingUrl ? `<a class="map-link" href="${section.bookingUrl}" target="_blank" rel="noreferrer">Open Booking</a>` : ""}
-          </div>
-          <ul>
-            ${section.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
-          </ul>
-        </div>
-      `
-    )
-    .join("");
 }
 
 function getItemTarget(item) {
@@ -1034,6 +1181,46 @@ function getItemTarget(item) {
 
   if (joined.includes("Place du Vieux-Marche")) {
     return "vieuxmarche";
+  }
+
+  if (joined.includes("수도원(Abbey)")) {
+    return "montabbey";
+  }
+
+  if (joined.includes("Etretat Cliffs")) {
+    return "etretat";
+  }
+
+  if (joined.includes("Parking du Grand Val")) {
+    return "grandvalparking";
+  }
+
+  if (joined.includes("Parking Indigo Paris Pasteur-Montparnasse")) {
+    return "indigoPasteur";
+  }
+
+  if (joined.includes("생제르맹 카페")) {
+    return "saintgermaincafe";
+  }
+
+  if (joined.includes("Le Bon Marche")) {
+    return "bonmarche";
+  }
+
+  if (joined.includes("향수") || joined.includes("감성 부티크") || joined.includes("특별한 기념품")) {
+    return "maraisshopping";
+  }
+
+  if (joined.includes("La Vallee Village")) {
+    return "lavalleevillage";
+  }
+
+  if (joined.includes("베르사유 외부/정원") || joined.includes("One Nation Paris")) {
+    return "versaillesonenation";
+  }
+
+  if (joined.includes("Falaise d'Aval")) {
+    return "falaiseaval";
   }
 
   if (joined.startsWith("Rouen")) {
@@ -1250,6 +1437,5 @@ function escapeHtml(value) {
 
 buildNav();
 buildSchedule();
-buildMeta();
 setupDayNav();
 setupEntryLinks();
