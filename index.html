@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paris 2026 Itinerary</title>
+    <meta
+      name="description"
+      content="Mobile-friendly Paris travel itinerary prepared from the original trip spreadsheet."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero__veil"></div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">July 9-17, 2026</p>
+          <h1>Paris Travel</h1>
+          <p class="hero__lede">
+            A phone-friendly itinerary view built from the original workbook,
+            preserving each day&apos;s timing and sequence.
+          </p>
+          <div class="hero__chips">
+            <span>Paris</span>
+            <span>Giverny</span>
+            <span>Rouen</span>
+            <span>Mont-Saint-Michel</span>
+            <span>Etretat</span>
+          </div>
+        </div>
+      </header>
+
+      <nav class="day-nav" aria-label="Trip days">
+        <div class="day-nav__scroller" id="day-nav"></div>
+      </nav>
+
+      <main class="layout">
+        <section class="content">
+          <div class="section-head">
+            <p class="section-head__eyebrow">Itinerary</p>
+            <h2>Daily Plan</h2>
+          </div>
+          <div id="schedule" class="schedule"></div>
+        </section>
+
+        <aside class="side-panel">
+          <section class="fact-card">
+            <p class="fact-card__eyebrow">Reference</p>
+            <h3>Trip Notes</h3>
+            <div id="meta"></div>
+          </section>
+
+          <section class="fact-card fact-card--soft">
+            <p class="fact-card__eyebrow">Viewing Tip</p>
+            <p class="fact-card__body">
+              Save this GitHub Pages URL to your home screen for quick access
+              while traveling.
+            </p>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
