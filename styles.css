@@ -26,9 +26,9 @@
   --radius-lg: 24px;
   --radius-md: 18px;
   --radius-sm: 12px;
-  --gradient-shell: linear-gradient(180deg, rgba(255, 252, 248, 0.7), rgba(243, 239, 255, 0.8));
+  --gradient-shell: linear-gradient(180deg, rgba(255, 252, 248, 0.6), rgba(243, 239, 255, 0.8));
   --gradient-hero: linear-gradient(135deg, #ffe86e 0%, #a9ddff 24%, #ffbfe1 52%, #c9b8ff 76%, #bceea8 100%);
-  --gradient-card: linear-gradient(180deg, rgba(255, 251, 247, 0.7), rgba(242, 236, 255, 0.8));
+  --gradient-card: linear-gradient(180deg, rgba(255, 251, 247, 0.6), rgba(242, 236, 255, 0.8));
   --gradient-pill: linear-gradient(135deg, rgba(255, 235, 122, 0.96), rgba(169, 221, 255, 0.94) 35%, rgba(255, 191, 225, 0.95) 72%, rgba(188, 238, 168, 0.94));
   --gradient-tag: linear-gradient(135deg, rgba(255, 229, 109, 0.98), rgba(255, 174, 214, 0.96), rgba(201, 184, 255, 0.96));
 }
@@ -150,6 +150,45 @@ body::after {
   background: radial-gradient(circle, rgba(188, 238, 168, 0.64), transparent 72%);
 }
 
+.quick-dock {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 7;
+  display: grid;
+  gap: 10px;
+}
+
+.quick-dock a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.56), transparent 32%),
+    linear-gradient(135deg, rgba(255, 232, 120, 0.95), rgba(169, 221, 255, 0.94) 36%, rgba(255, 191, 225, 0.95) 72%, rgba(188, 238, 168, 0.94));
+  color: var(--plum);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  box-shadow: 0 16px 30px rgba(186, 118, 157, 0.18);
+  backdrop-filter: blur(18px);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.quick-dock a:hover,
+.quick-dock a:focus-visible {
+  transform: translateY(-2px) scale(1.02);
+  outline: none;
+  box-shadow: 0 18px 34px rgba(186, 118, 157, 0.24);
+}
+
 .page-shell {
   position: relative;
   z-index: 1;
@@ -261,9 +300,10 @@ body::after {
 
 .hero__title-row {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: flex-start;
   gap: 16px;
+  margin-bottom: 10px;
 }
 
 .hero h1 {
@@ -820,6 +860,18 @@ body::after {
 }
 
 @media (max-width: 640px) {
+  .quick-dock {
+    right: 12px;
+    bottom: 16px;
+    gap: 8px;
+  }
+
+  .quick-dock a {
+    width: 48px;
+    height: 48px;
+    font-size: 0.76rem;
+  }
+
   .page-shell {
     width: min(100vw - 34px, 560px);
     padding-top: 20px;
