@@ -1096,6 +1096,20 @@ function buildSchedule() {
     fragment.appendChild(article);
   });
 
+  const closing = document.createElement("section");
+  closing.className = "trip-closing";
+  closing.innerHTML = `
+    <p class="trip-closing__eyebrow">Return Home</p>
+    <h3>Bon retour</h3>
+    <p class="trip-closing__lede">Welcome home from Paris, with a safe landing and refreshed energy for the return to everyday days.</p>
+    <div class="trip-closing__chips">
+      <span>ICN arrival</span>
+      <span>Baggage</span>
+      <span>Home</span>
+    </div>
+  `;
+  fragment.appendChild(closing);
+
   scheduleRoot.appendChild(fragment);
 }
 

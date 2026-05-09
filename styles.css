@@ -262,8 +262,8 @@ body::after {
 .hero__title-row {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 14px;
+  justify-content: flex-start;
+  gap: 16px;
 }
 
 .hero h1 {
@@ -278,7 +278,8 @@ body::after {
   flex: 0 0 auto;
   width: clamp(38px, 7vw, 62px);
   height: auto;
-  margin-top: 4px;
+  margin-top: 6px;
+  margin-left: -2px;
   filter: drop-shadow(0 10px 18px rgba(113, 75, 93, 0.14));
   opacity: 0.9;
 }
@@ -431,6 +432,73 @@ body::after {
 .schedule {
   display: grid;
   gap: 18px;
+}
+
+.trip-closing {
+  position: relative;
+  overflow: hidden;
+  padding: 24px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.38), transparent 28%),
+    linear-gradient(135deg, rgba(255, 241, 210, 0.88), rgba(255, 223, 237, 0.82) 48%, rgba(215, 235, 255, 0.82));
+  box-shadow: var(--shadow-soft);
+  animation: fadeUp 0.8s ease both;
+}
+
+.trip-closing::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  pointer-events: none;
+}
+
+.trip-closing__eyebrow {
+  margin: 0;
+  color: rgba(113, 75, 93, 0.72);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.trip-closing h3 {
+  margin: 10px 0 0;
+  color: var(--plum);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 5vw, 2.7rem);
+  line-height: 0.95;
+}
+
+.trip-closing__lede {
+  max-width: 34rem;
+  margin: 10px 0 0;
+  color: rgba(64, 46, 53, 0.82);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.trip-closing__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.trip-closing__chips span {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 250, 238, 0.48));
+  color: var(--plum);
+  font-size: 0.78rem;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(196, 107, 153, 0.08);
 }
 
 .day-card {
@@ -778,12 +846,13 @@ body::after {
   }
 
   .hero__title-row {
-    gap: 10px;
+    gap: 12px;
   }
 
   .hero__tower {
     width: 36px;
     margin-top: 2px;
+    margin-left: -1px;
   }
 
   .day-pill {
@@ -793,6 +862,10 @@ body::after {
   .day-card {
     padding: 16px 14px;
     scroll-margin-top: 98px;
+  }
+
+  .trip-closing {
+    padding: 20px 18px;
   }
 
   .day-card__header {
