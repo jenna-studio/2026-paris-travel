@@ -939,10 +939,14 @@ function buildNav() {
   tripData.schedule.forEach((day, index) => {
     const link = document.createElement("a");
     link.className = "day-pill";
+    if (index === 0) {
+      link.classList.add("is-active");
+      link.setAttribute("aria-current", "true");
+    }
     link.href = `#day-${index + 1}`;
     link.dataset.target = `day-${index + 1}`;
     link.style.setProperty("--pill-accent", dayAccentPalette[index % dayAccentPalette.length]);
-    link.innerHTML = `<strong>${day.dayLabel}</strong><span>${day.weekday}</span>`;
+    link.innerHTML = `<small>Day ${index + 1}</small><strong>${day.dayLabel}</strong><span>${day.weekday}</span>`;
     fragment.appendChild(link);
   });
 

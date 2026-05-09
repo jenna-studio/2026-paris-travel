@@ -370,7 +370,7 @@ body::after {
   position: sticky;
   top: 0;
   z-index: 5;
-  padding: 16px 0 16px;
+  /* padding: 16px 0 16px; */
   margin-top: 12px;
   backdrop-filter: blur(18px);
 }
@@ -427,20 +427,30 @@ body::after {
   background: linear-gradient(135deg, rgba(255, 235, 122, 1), rgba(169, 221, 255, 0.99) 36%, rgba(255, 191, 225, 0.99) 72%, rgba(188, 238, 168, 0.99));
 }
 
+.day-pill small,
 .day-pill strong,
 .day-pill span {
   display: block;
 }
 
+.day-pill small {
+  margin-bottom: 2px;
+  color: var(--plum);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 .day-pill strong {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 800;
 }
 
 .day-pill span {
-  margin-top: 3px;
+  margin-top: 2px;
   color: var(--muted);
-  font-size: 0.72rem;
+  font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -553,7 +563,7 @@ body::after {
 .day-card {
   padding: 20px 18px 18px;
   animation: fadeUp 0.75s ease both;
-  scroll-margin-top: 88px;
+  scroll-margin-top: 184px;
 }
 
 .day-card::before {
@@ -913,7 +923,7 @@ body::after {
 
   .day-card {
     padding: 16px 14px;
-    scroll-margin-top: 98px;
+    scroll-margin-top: 190px;
   }
 
   .trip-closing {
