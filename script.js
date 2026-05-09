@@ -951,17 +951,48 @@ function buildNav() {
 
 function setActiveDayPill(targetId) {
   const pills = navRoot.querySelectorAll(".day-pill");
+  let activePill = null;
 
   pills.forEach((pill) => {
     const isActive = pill.getAttribute("href") === `#${targetId}`;
     pill.classList.toggle("is-active", isActive);
     pill.setAttribute("aria-current", isActive ? "true" : "false");
+
+    if (isActive) {
+      activePill = pill;
+    }
   });
+
+  if (activePill) {
+    activePill.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest"
+    });
+  }
 }
 
 function setupDayNav() {
   const initialTarget = window.location.hash ? window.location.hash.slice(1) : "day-1";
   setActiveDayPill(initialTarget);
+  const dayCards = [...scheduleRoot.querySelectorAll(".day-card")];
+
+  const updateActiveDayFromViewport = () => {
+    const anchorY = window.innerWidth <= 640 ? 150 : 180;
+    let activeCard = dayCards[0];
+
+    dayCards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+
+      if (rect.top <= anchorY) {
+        activeCard = card;
+      }
+    });
+
+    if (activeCard) {
+      setActiveDayPill(activeCard.id);
+    }
+  };
 
   navRoot.addEventListener("click", (event) => {
     const pill = event.target.closest(".day-pill");
@@ -982,25 +1013,9 @@ function setupDayNav() {
     setActiveDayPill(targetId);
   });
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visibleEntries = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-      if (visibleEntries.length > 0) {
-        setActiveDayPill(visibleEntries[0].target.id);
-      }
-    },
-    {
-      rootMargin: "-24% 0px -55% 0px",
-      threshold: [0.2, 0.35, 0.5, 0.7]
-    }
-  );
-
-  scheduleRoot.querySelectorAll(".day-card").forEach((card) => {
-    observer.observe(card);
-  });
+  window.addEventListener("scroll", updateActiveDayFromViewport, { passive: true });
+  window.addEventListener("resize", updateActiveDayFromViewport);
+  updateActiveDayFromViewport();
 }
 
 function buildSchedule() {
