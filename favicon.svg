@@ -1,19 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
     <linearGradient id="g" x1="0%" x2="100%" y1="0%" y2="100%">
-      <stop offset="0%" stop-color="#fff6ef" />
-      <stop offset="100%" stop-color="#f7d9e7" />
+      <stop offset="0%" stop-color="#ffe86e" />
+      <stop offset="30%" stop-color="#a9ddff" />
+      <stop offset="68%" stop-color="#ffbfe1" />
+      <stop offset="100%" stop-color="#c9b8ff" />
     </linearGradient>
     <linearGradient id="tower" x1="50%" x2="50%" y1="0%" y2="100%">
-      <stop offset="0%" stop-color="#8d5b70" />
-      <stop offset="100%" stop-color="#5c3948" />
+      <stop offset="0%" stop-color="#c75b8f" />
+      <stop offset="52%" stop-color="#7f62d9" />
+      <stop offset="100%" stop-color="#3f3d74" />
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="16" fill="url(#g)" />
-  <circle cx="32" cy="20" r="16" fill="#ffffff" fill-opacity=".38" />
+  <circle cx="32" cy="20" r="16" fill="#ffffff" fill-opacity=".34" />
   <path
     d="M18 52h28"
-    stroke="#e1b978"
+    stroke="#f0c94f"
     stroke-width="2.8"
     stroke-linecap="round"
   />
@@ -31,7 +34,7 @@
   />
   <path
     d="M27.4 29.2h9.2M25.5 35.1h13"
-    stroke="#fff8f4"
+    stroke="#fff9fb"
     stroke-width="1.4"
     stroke-linecap="round"
   />
