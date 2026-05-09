@@ -259,6 +259,7 @@ function buildSchedule() {
     const article = document.createElement("article");
     article.className = "day-card";
     article.id = `day-${index + 1}`;
+    article.style.animationDelay = `${index * 45}ms`;
 
     const eventCount = day.events.reduce((sum, event) => sum + event.items.length, 0);
 
