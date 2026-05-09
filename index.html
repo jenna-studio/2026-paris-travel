@@ -29,17 +29,54 @@
         <div class="hero__veil"></div>
         <div class="hero__content">
           <p class="hero__eyebrow">July 9-17, 2026</p>
-          <h1>Paris Travel</h1>
+          <div class="hero__title-row">
+            <h1>Paris Travel</h1>
+            <svg
+              class="hero__tower"
+              viewBox="0 0 120 240"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <defs>
+                <linearGradient id="tower-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#fff6ca" />
+                  <stop offset="32%" stop-color="#ffd9ad" />
+                  <stop offset="68%" stop-color="#f5b0cf" />
+                  <stop offset="100%" stop-color="#9bd6fb" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M60 10l4 16h-8l4-16zm-10 22h20l7 28h12v8H78l8 40h11v8H88l10 58h10v8H76l8 42H72l-12-70-12 70H36l8-42H12v-8h10l10-58H23v-8h11l8-40H31v-8h12l7-28zm1 36l-8 40h34l-8-40H51zm-12 48l-9 58h60l-9-58H39zm15 66l-5 34h22l-5-34H54z"
+                fill="url(#tower-gradient)"
+                stroke="#714b5d"
+                stroke-width="3.5"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M50 32h20M43 60h34M36 88h48M30 116h60M26 146h68M22 176h76M44 108l16-82 16 82M49 182h22"
+                fill="none"
+                stroke="rgba(113,75,93,0.68)"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M28 232h64"
+                fill="none"
+                stroke="#714b5d"
+                stroke-width="3.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
           <p class="hero__lede">
-            A phone-friendly itinerary view built from the original workbook,
-            preserving each day&apos;s timing and sequence.
+            Yoo&apos;s family 2026 summer Paris travel plan.
           </p>
           <div class="hero__chips">
-            <span>Paris</span>
-            <span>Giverny</span>
-            <span>Rouen</span>
-            <span>Mont-Saint-Michel</span>
-            <span>Etretat</span>
+            <a href="https://maps.google.com/" target="_blank" rel="noreferrer">Google Maps</a>
+            <a href="https://translate.google.com/" target="_blank" rel="noreferrer">Google Translate</a>
+            <a href="https://lens.google.com/" target="_blank" rel="noreferrer">Google Lens</a>
+            <a href="https://www.google.com/" target="_blank" rel="noreferrer">Google</a>
           </div>
         </div>
       </header>
@@ -53,7 +90,6 @@
           <div class="section-head">
             <p class="section-head__eyebrow">Itinerary</p>
             <h2>Daily Plan</h2>
-            <p class="section-head__note">Soft luxury styling, exact trip timing intact.</p>
           </div>
           <div id="schedule" class="schedule"></div>
         </section>

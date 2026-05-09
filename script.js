@@ -309,6 +309,21 @@ const detailLookup = {
       "Your plan here is specifically for the exterior, not a full museum visit."
     ]
   },
+  montmartre: {
+    label: "Neighborhood",
+    title: "Montmartre",
+    subtitle: "Historic hilltop district known for village streets, artists, and broad Paris views.",
+    mapQuery: "Montmartre, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Montmartre%20%28Paris%29.jpg?width=800",
+    imageAlt: "Street view in Montmartre, Paris",
+    items: [
+      "Montmartre is one of Paris’s most atmospheric neighborhoods, with steep lanes, small cafes, and a more old-Paris feel.",
+      "It is closely associated with artists, cabarets, and the hill around Sacre-Coeur.",
+      "This stop works well as a morning walking area because several nearby sights cluster within a short distance.",
+      "Your Day 4 plan uses Montmartre as the main area before moving through its landmark stops."
+    ]
+  },
   orsay: {
     label: "Museum",
     title: "Musee d'Orsay",
@@ -337,6 +352,51 @@ const detailLookup = {
       "Walking along it gives you open views of bridges, monuments, and riverside architecture in a more relaxed pace than the metro.",
       "This stretch fits well between the Louvre side and Musee d'Orsay because the riverbank route is part of the classic central Paris walk.",
       "Your itinerary marks this as a short scenic walk before the Eiffel Tower area later in the day."
+    ]
+  },
+  champselysees: {
+    label: "Avenue",
+    title: "Champs-Elysees",
+    subtitle: "Paris’s grand ceremonial avenue, known for flagship stores, cafes, and its long view toward the Arc de Triomphe.",
+    mapQuery: "Champs-Elysees, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Avenue%20des%20Champs-%C3%89lys%C3%A9es%20%2822426421876%29.jpg?width=800",
+    imageAlt: "Champs-Elysees in Paris",
+    items: [
+      "This is one of Paris’s most famous streets and a classic place for strolling, shopping, and cafe stops.",
+      "It runs between Place de la Concorde and the Arc de Triomphe, so the avenue itself is part of the attraction.",
+      "The area mixes luxury brands, major retail, and broad sidewalks that feel especially lively in the afternoon and evening.",
+      "Your Day 3 plan keeps this as a shopping and cafe block before moving on to Palais Garnier."
+    ]
+  },
+  palaisgarnier: {
+    label: "Opera House",
+    title: "Palais Garnier",
+    subtitle: "Grand 19th-century opera house famous for its lavish interiors and monumental Beaux-Arts design.",
+    mapQuery: "Palais Garnier, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Op%C3%A9ra%20Garnier%20%2832816267521%29.jpg?width=800",
+    imageAlt: "Palais Garnier in Paris",
+    items: [
+      "Also called the Opera Garnier, it is one of Paris’s most ornate landmark interiors.",
+      "It is especially known for its grand staircase, gilded decoration, painted ceilings, and theatrical public rooms.",
+      "This stop fits well after the Champs-Elysees because it shifts the day from shopping streets into one of the city’s most dramatic indoor spaces.",
+      "Your itinerary treats this as a focused visit to one of Paris’s most visually impressive interiors."
+    ]
+  },
+  galerieslafayette: {
+    label: "Department Store",
+    title: "Galeries Lafayette Haussmann",
+    subtitle: "Historic Paris department store known for its stained-glass dome and free rooftop view.",
+    mapQuery: "Galeries Lafayette Haussmann, Paris, France",
+    imageUrl:
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Galerie%20Lafayette%20Haussmann%20Dome.jpg?width=800",
+    imageAlt: "Dome inside Galeries Lafayette Haussmann in Paris",
+    items: [
+      "The central dome is the main visual highlight and one of the most recognizable department-store interiors in Paris.",
+      "It is popular both for shopping and for the rooftop terrace, which offers a free city view.",
+      "This stop fits naturally after Palais Garnier because it is only a short walk away and keeps you in the same boulevard Haussmann area.",
+      "Your itinerary highlights the dome and the free rooftop 전망 rather than a long shopping-only stop."
     ]
   },
   champdemars: {
@@ -465,6 +525,40 @@ function buildNav() {
   navRoot.appendChild(fragment);
 }
 
+function setActiveDayPill(targetId) {
+  const pills = navRoot.querySelectorAll(".day-pill");
+
+  pills.forEach((pill) => {
+    const isActive = pill.getAttribute("href") === `#${targetId}`;
+    pill.classList.toggle("is-active", isActive);
+    pill.setAttribute("aria-current", isActive ? "true" : "false");
+  });
+}
+
+function setupDayNav() {
+  const initialTarget = window.location.hash ? window.location.hash.slice(1) : "day-1";
+  setActiveDayPill(initialTarget);
+
+  navRoot.addEventListener("click", (event) => {
+    const pill = event.target.closest(".day-pill");
+
+    if (!pill) {
+      return;
+    }
+
+    const targetId = pill.getAttribute("href")?.slice(1);
+
+    if (targetId) {
+      setActiveDayPill(targetId);
+    }
+  });
+
+  window.addEventListener("hashchange", () => {
+    const targetId = window.location.hash ? window.location.hash.slice(1) : "day-1";
+    setActiveDayPill(targetId);
+  });
+}
+
 function buildSchedule() {
   const fragment = document.createDocumentFragment();
 
@@ -473,8 +567,6 @@ function buildSchedule() {
     article.className = "day-card";
     article.id = `day-${index + 1}`;
     article.style.animationDelay = `${index * 45}ms`;
-
-    const eventCount = day.events.reduce((sum, event) => sum + event.items.length, 0);
 
     const timeline = day.events
       .map((event) => {
@@ -538,7 +630,6 @@ function buildSchedule() {
           <h3>Day ${index + 1}</h3>
           <p>${day.dayLabel} · ${day.weekday} · ${formatDate(day.date)}</p>
         </div>
-        <div class="tag">${eventCount} items</div>
       </div>
       <div class="timeline">${timeline}</div>
     `;
@@ -602,8 +693,24 @@ function getItemTarget(item) {
     return "louvre";
   }
 
+  if (joined.includes("Montmartre")) {
+    return "montmartre";
+  }
+
   if (joined.includes("세느강 따라 걷기")) {
     return "seinewalk";
+  }
+
+  if (joined.includes("Champs-Elysees")) {
+    return "champselysees";
+  }
+
+  if (joined.startsWith("Palais Garnier")) {
+    return "palaisgarnier";
+  }
+
+  if (joined.includes("Galeries Lafayette Haussmann")) {
+    return "galerieslafayette";
   }
 
   if (joined.includes("Champ de Mars Tour Eiffel")) {
@@ -801,4 +908,5 @@ function escapeHtml(value) {
 buildNav();
 buildSchedule();
 buildMeta();
+setupDayNav();
 setupEntryLinks();
